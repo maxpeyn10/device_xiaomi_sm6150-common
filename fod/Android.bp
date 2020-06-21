@@ -26,7 +26,6 @@ cc_binary {
     shared_libs: [
         "libbase",
         "libhardware",
-        "libhardware_legacy",
         "libhidlbase",
         "libhidltransport",
         "liblog",
@@ -38,12 +37,4 @@ cc_binary {
         "vendor.xiaomi.hardware.touchfeature@1.0",
     ],
     proprietary: true,
-}
-
-cc_library_static {
-    name: "libfod_extension",
-    srcs: ["FodExtension.cpp"],
-    include_dirs: [
-        "frameworks/native/services/surfaceflinger/CompositionEngine/include"
-    ],
 }

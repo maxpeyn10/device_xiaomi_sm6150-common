@@ -55,16 +55,14 @@ public:
     Return<void> setCallback(const sp<::vendor::lineage::biometrics::fingerprint::inscreen::V1_0::IFingerprintInscreenCallback>& callback) override;
 
 private:
+    bool mFodCircleVisible;
     sp<ITouchFeature> TouchFeatureService;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
-
-    std::mutex mCallbackLock;
-    sp<IFingerprintInscreenCallback> mCallback;
 };
 
 }  // namespace implementation
 }  // namespace V1_0
-}  // namespace inscreen
+}  // namespace inscreenx
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace lineage
